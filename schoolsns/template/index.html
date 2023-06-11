@@ -5,11 +5,11 @@
   <title>コメント一覧</title>
 </head>
 <body>
-  
-  <form method="POST">
-      {% csrf_token %}
-      {{ form.as_p }}
-      <button type="submit" name="submit">Submit</button>
-  </form>
+  {% for post in post_list %}
+    <p>{{post.content}}</p>
+  {% endfor %}
+  {% block content %}
+  {% endblock content %}
+
 </body>
 </html>
