@@ -1,7 +1,15 @@
-{% extends 'index.html' %}
-{% block content %}
-<form method="post">{% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="投稿">
-</form>
-{% endblock content %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>コメント一覧</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="投稿">
+    </form>
+
+</body>
+</html>
