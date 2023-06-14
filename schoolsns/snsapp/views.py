@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from .models import Post
 from .forms import PostForm
-from django.views.generic import ListView,CreateView,TemplateView,FormView
+from django.views.generic import ListView,CreateView
 from django.urls import reverse_lazy
 
 class PostlistView(ListView):
