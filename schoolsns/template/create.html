@@ -5,10 +5,10 @@
   <title>コメント一覧</title>
 </head>
 <body>
-    <form method="post">
+    <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
-        <input type="submit" value="投稿">
+        <button type="submit">送信</button>
     </form>
 
 </body>

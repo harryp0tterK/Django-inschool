@@ -5,10 +5,16 @@
   <title>コメント一覧</title>
 </head>
 <body>
-  <a href="{% url 'create' %}">投稿する</a>
-    {% for post in post_list %}
-    <p>{{post.content}}</p>
+  <div>
+  {% for post in post_list %}
+    
+    <p>{{ post.id }} {{post.timestamp}}</p>
+    <p>{{ post.content }}</p>
+    
   {% endfor %}
+  <a href="{% url 'create' %}">投稿する</a>
+  </div>
+  
 
 </body>
 </html>
